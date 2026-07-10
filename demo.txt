@@ -1,1 +1,3 @@
  this is write method
+ hello 
+ hi
