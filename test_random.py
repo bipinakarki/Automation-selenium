@@ -11,23 +11,10 @@ def driver():
   yield driver
   driver.quit()
   
-usernames=[
-    "standard_user",
-    "locked_out_user",
-    "error_user",
-    "visual_user",
-    "problem_user",
-    "performance_glitch_user",
-    "invalid_user",
-    "wrong_user",
-    "user"
-]
+usernames=[ "standard_user","locked_out_user","error_user","visual_user","problem_user","performance_glitch_user",
+           "invalid_user","wrong_user","user"]
 
-passwords=[
-    "invalid_password",
-    "secret_sauce",
-    "password"
-]
+passwords=["invalid_password","secret_sauce","password"]
 def get_random():
     username=random.choice(usernames)
     password=random.choice(passwords)
@@ -45,4 +32,4 @@ def test_random(driver):
       print("login successful")
    else:
       assert "inventory.html" not in driver.current_url
-      print("❌ Login Failed")
+      print("login failed")

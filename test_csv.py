@@ -33,10 +33,10 @@ def login_test(username, password):
 
     # Verify Login
     if "inventory.html" in driver.current_url:
-        print(f"✅ Login Successful : {username}")
+        print(f"login successful: {username}")
 
     else:
-        print(f"❌ Login Failed : {username}")
+        print(f"login failed : {username}")
 
 
 # Read CSV File
