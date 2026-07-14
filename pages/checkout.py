@@ -7,6 +7,7 @@ class checkout:
         self.firstname=(By.ID,"first-name")
         self.lastname=(By.ID,"last-name")
         self.zipcode=(By.ID,"postal-code")
+        self.error = (By.CSS_SELECTOR, "h3[data-test='error']")
         self.cont=(By.ID,"continue")
     def first_name(self,firstname):
         self.driver.find_element(*self.firstname).send_keys(firstname)
@@ -20,3 +21,7 @@ class checkout:
     def click_cont(self):
         self.driver.find_element(*self.cont).click()
         time.sleep(1)
+
+    def get_error_message(self):
+     return self.driver.find_element(*self.error).text
+
